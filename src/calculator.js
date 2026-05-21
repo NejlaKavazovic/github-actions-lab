@@ -1,5 +1,4 @@
 function add(a, b) {
-  var c = 5;
   return a + b;
 }
 
