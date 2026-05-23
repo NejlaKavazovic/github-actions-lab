@@ -42,3 +42,10 @@ jobs:
 
       - name: Ispisi okruzenje
         run: node --version && npm --version
+
+      - name: Pokreni testove s flagovima
+        run: npm test -- ${{ matrix.extra-flag || '' }}
+
+      - name: Eksperimentalno upozorenje
+        if: matrix.experimental == true
+        run: echo "Ovo je eksperimentalna kombinacija!"
